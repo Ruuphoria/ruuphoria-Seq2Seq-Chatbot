@@ -9,3 +9,5 @@ from tensorflow.python.ops.math_ops import tanh, sigmoid
 from tensorflow.contrib.rnn.python.ops.core_rnn_cell_impl import _linear, _checked_scope
 
 class CondWrapper(RNNCell):
+  def __init__(self, cell, context):
+    self._context = context
