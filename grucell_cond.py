@@ -11,3 +11,7 @@ from tensorflow.contrib.rnn.python.ops.core_rnn_cell_impl import _linear, _check
 class CondWrapper(RNNCell):
   def __init__(self, cell, context):
     self._context = context
+    self._cell = cell
+    self._output_size = self._cell.output_size
+
+  @property
