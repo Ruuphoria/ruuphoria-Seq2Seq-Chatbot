@@ -15,3 +15,9 @@ class CondWrapper(RNNCell):
     self._output_size = self._cell.output_size
 
   @property
+  def state_size(self):
+    return self._cell.state_size
+
+  @property
+  def output_size(self):
+    return self._output_size
