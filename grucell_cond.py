@@ -21,3 +21,7 @@ class CondWrapper(RNNCell):
   @property
   def output_size(self):
     return self._output_size
+
+  def zero_state(self, batch_size, dtype):
+    with ops.name_scope(type(self).__name__ + "ZeroState", values=[batch_size]):
+      return self._cell.zero_state(batch_size, dtype)
