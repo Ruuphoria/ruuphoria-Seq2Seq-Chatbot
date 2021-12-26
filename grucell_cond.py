@@ -29,3 +29,6 @@ class CondWrapper(RNNCell):
   def __call__(self, inputs, state, scope=None):
     output, res_state = self._cell(inputs, state, self._context)
     return output, res_state
+
+class GRUCellCond(RNNCell):
+  """Gated Recurrent Unit cell (cf. http://arxiv.org/abs/1406.1078)."""
