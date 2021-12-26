@@ -34,3 +34,4 @@ class GRUCellCond(RNNCell):
   """Gated Recurrent Unit cell (cf. http://arxiv.org/abs/1406.1078)."""
 
   def __init__(self, num_units, input_size=None, activation=tanh, reuse=None):
+    if input_size is not None:
