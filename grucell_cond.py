@@ -42,3 +42,7 @@ class GRUCellCond(RNNCell):
 
   @property
   def state_size(self):
+    return self._num_units
+
+  @property
+  def output_size(self):
