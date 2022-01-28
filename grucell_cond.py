@@ -39,3 +39,6 @@ class GRUCellCond(RNNCell):
     self._num_units = num_units
     self._activation = activation
     self._reuse = reuse
+
+  @property
+  def state_size(self):
