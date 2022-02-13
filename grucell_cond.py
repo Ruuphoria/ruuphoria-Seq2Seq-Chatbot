@@ -46,3 +46,8 @@ class GRUCellCond(RNNCell):
 
   @property
   def output_size(self):
+    return self._num_units
+
+  def __call__(self, inputs, state, context, scope=None):
+    """Gated recurrent unit (GRU) with nunits cells."""
+    with _checked_scope(self, scope or "gru_cell", reuse=self._reuse):
