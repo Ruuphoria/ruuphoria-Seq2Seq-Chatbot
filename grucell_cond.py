@@ -51,3 +51,5 @@ class GRUCellCond(RNNCell):
   def __call__(self, inputs, state, context, scope=None):
     """Gated recurrent unit (GRU) with nunits cells."""
     with _checked_scope(self, scope or "gru_cell", reuse=self._reuse):
+      with vs.variable_scope("gates"):  # Reset gate and update gate.
+        # We start with bias of 1.0 to not reset and not update.
