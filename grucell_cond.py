@@ -53,3 +53,8 @@ class GRUCellCond(RNNCell):
     with _checked_scope(self, scope or "gru_cell", reuse=self._reuse):
       with vs.variable_scope("gates"):  # Reset gate and update gate.
         # We start with bias of 1.0 to not reset and not update.
+        value = sigmoid(_linear(
+          [inputs, state, context], 2 * self._num_units, True, 1.0))
+        r, u = array_ops.split(
+            value=value,
+            num_or_size_splits=2,
