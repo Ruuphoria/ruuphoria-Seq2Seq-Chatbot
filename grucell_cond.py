@@ -62,3 +62,5 @@ class GRUCellCond(RNNCell):
       with vs.variable_scope("candidate"):
         c = self._activation(_linear([inputs, r * state],
                                      self._num_units, True))
+      new_h = u * state + (1 - u) * c
+    return new_h, new_h
