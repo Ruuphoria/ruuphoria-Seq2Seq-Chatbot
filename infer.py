@@ -1,1 +1,1 @@
-# -*- codin
+# -*- coding: 
