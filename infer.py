@@ -3,4 +3,4 @@
 import tensorflow as tf
 import numpy as np
 import pprint
-import _pickle as
+import _pickle as cPi
