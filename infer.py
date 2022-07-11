@@ -4,4 +4,5 @@ import tensorflow as tf
 import numpy as np
 import pprint
 import _pickle as cPickle
-from model import DialogueM
+from model import DialogueModel
+f
