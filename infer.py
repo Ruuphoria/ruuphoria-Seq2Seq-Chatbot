@@ -5,4 +5,4 @@ import numpy as np
 import pprint
 import _pickle as cPickle
 from model import DialogueModel
-from utils import Tex
+from utils import TextLoad
