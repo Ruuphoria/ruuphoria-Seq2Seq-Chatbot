@@ -9,3 +9,5 @@ from utils import TextLoader, UNK_ID, PAD_ID
 from glob import glob
 
 checkpoint = "/tmp/model.ckpt"
+
+pp 
