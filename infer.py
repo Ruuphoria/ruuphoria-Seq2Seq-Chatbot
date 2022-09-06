@@ -10,4 +10,4 @@ from glob import glob
 
 checkpoint = "/tmp/model.ckpt"
 
-pp = pprin
+pp = pprint.P
