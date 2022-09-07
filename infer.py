@@ -10,4 +10,6 @@ from glob import glob
 
 checkpoint = "/tmp/model.ckpt"
 
-pp = pprint.PrettyPrinte
+pp = pprint.PrettyPrinter()
+
+f
