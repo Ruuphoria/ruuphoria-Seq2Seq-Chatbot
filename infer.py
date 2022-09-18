@@ -12,4 +12,4 @@ checkpoint = "/tmp/model.ckpt"
 
 pp = pprint.PrettyPrinter()
 
-flags = tf.
+flags = tf.app.flags
