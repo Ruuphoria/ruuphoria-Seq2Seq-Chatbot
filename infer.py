@@ -13,4 +13,4 @@ checkpoint = "/tmp/model.ckpt"
 pp = pprint.PrettyPrinter()
 
 flags = tf.app.flags
-flags.DEFINE_string("checkpoint", "checkpoint", "D
+flags.DEFINE_string("checkpoint", "checkpoint", "Dire
