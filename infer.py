@@ -15,4 +15,4 @@ pp = pprint.PrettyPrinter()
 flags = tf.app.flags
 flags.DEFINE_string("checkpoint", "checkpoint", "Directory name to save the checkpoints [checkpoint]")
 flags.DEFINE_string("logdir", "log", "Log directory [log]")
-flags.DEFINE_float("temperat
+flags.DEFINE_float("temperature
