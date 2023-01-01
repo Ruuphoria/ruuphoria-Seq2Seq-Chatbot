@@ -17,3 +17,5 @@ flags.DEFINE_string("checkpoint", "checkpoint", "Directory name to save the chec
 flags.DEFINE_string("logdir", "log", "Log directory [log]")
 flags.DEFINE_float("temperature", 0.5, "temperature")
 FLAGS = flags.FLAGS
+
+de
