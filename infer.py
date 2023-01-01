@@ -18,4 +18,4 @@ flags.DEFINE_string("logdir", "log", "Log directory [log]")
 flags.DEFINE_float("temperature", 0.5, "temperature")
 FLAGS = flags.FLAGS
 
-de
+def main(_
