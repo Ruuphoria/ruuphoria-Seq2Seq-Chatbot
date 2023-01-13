@@ -19,4 +19,4 @@ flags.DEFINE_float("temperature", 0.5, "temperature")
 FLAGS = flags.FLAGS
 
 def main(_):
-  config = cPickle.l
+  config = cPickle.load(open(F
