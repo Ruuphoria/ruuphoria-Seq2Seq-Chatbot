@@ -19,4 +19,5 @@ flags.DEFINE_float("temperature", 0.5, "temperature")
 FLAGS = flags.FLAGS
 
 def main(_):
-  config = cPickle.load(open(FLAGS.logdir + "/hyperparams.pkl", 'rb'
+  config = cPickle.load(open(FLAGS.logdir + "/hyperparams.pkl", 'rb'))
+  pp
