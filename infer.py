@@ -20,4 +20,4 @@ FLAGS = flags.FLAGS
 
 def main(_):
   config = cPickle.load(open(FLAGS.logdir + "/hyperparams.pkl", 'rb'))
-  pp
+  pp.pp
