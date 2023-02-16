@@ -23,4 +23,4 @@ def main(_):
   pp.pprint(config)
 
   try:
-    # pre-trained chars embe
+    # pre-trained chars embeddi
