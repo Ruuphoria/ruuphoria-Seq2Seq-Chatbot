@@ -24,4 +24,4 @@ def main(_):
 
   try:
     # pre-trained chars embedding
-    emb = np.l
+    emb = np.loa
