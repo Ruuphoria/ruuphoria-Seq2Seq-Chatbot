@@ -25,4 +25,4 @@ def main(_):
   try:
     # pre-trained chars embedding
     emb = np.load("./data/emb.npy")
-    chars 
+    chars = c
