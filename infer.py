@@ -26,4 +26,4 @@ def main(_):
     # pre-trained chars embedding
     emb = np.load("./data/emb.npy")
     chars = cPickle.load(open("./data/vocab.pkl", 'rb'))
-    vocab_size, emb_size = np.s
+    vocab_size, emb_size = np.shape(e
