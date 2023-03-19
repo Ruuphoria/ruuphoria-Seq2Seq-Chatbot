@@ -27,4 +27,4 @@ def main(_):
     emb = np.load("./data/emb.npy")
     chars = cPickle.load(open("./data/vocab.pkl", 'rb'))
     vocab_size, emb_size = np.shape(emb)
-    data_loader = TextLoader('./data', 1, c
+    data_loader = TextLoader('./data', 1, cha
