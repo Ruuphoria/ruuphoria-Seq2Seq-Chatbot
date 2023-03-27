@@ -28,4 +28,4 @@ def main(_):
     chars = cPickle.load(open("./data/vocab.pkl", 'rb'))
     vocab_size, emb_size = np.shape(emb)
     data_loader = TextLoader('./data', 1, chars)
-  except Exceptio
+  except Exception:
