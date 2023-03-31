@@ -29,4 +29,4 @@ def main(_):
     vocab_size, emb_size = np.shape(emb)
     data_loader = TextLoader('./data', 1, chars)
   except Exception:
-    data_loader = TextLoader(
+    data_loader = TextLoader('./data'
