@@ -30,4 +30,4 @@ def main(_):
     data_loader = TextLoader('./data', 1, chars)
   except Exception:
     data_loader = TextLoader('./data', 1)
-    emb_size = co
+    emb_size = config
