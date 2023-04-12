@@ -30,4 +30,5 @@ def main(_):
     data_loader = TextLoader('./data', 1, chars)
   except Exception:
     data_loader = TextLoader('./data', 1)
-    emb_size = config["emb_s
+    emb_size = config["emb_size"]
+  
