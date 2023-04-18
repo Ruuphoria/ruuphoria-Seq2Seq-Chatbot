@@ -31,4 +31,4 @@ def main(_):
   except Exception:
     data_loader = TextLoader('./data', 1)
     emb_size = config["emb_size"]
-    vocab_size = data_loader.v
+    vocab_size = data_loader.vocab_
