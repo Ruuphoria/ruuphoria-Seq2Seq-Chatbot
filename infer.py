@@ -32,3 +32,5 @@ def main(_):
     data_loader = TextLoader('./data', 1)
     emb_size = config["emb_size"]
     vocab_size = data_loader.vocab_size
+
+ 
