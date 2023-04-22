@@ -33,4 +33,4 @@ def main(_):
     emb_size = config["emb_size"]
     vocab_size = data_loader.vocab_size
 
-  checkpoi
+  checkpoint 
