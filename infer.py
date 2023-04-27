@@ -34,3 +34,5 @@ def main(_):
     vocab_size = data_loader.vocab_size
 
   checkpoint = FLAGS.checkpoint + '/model.ckpt'
+
+  
