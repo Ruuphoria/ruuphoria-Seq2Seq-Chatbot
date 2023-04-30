@@ -35,4 +35,4 @@ def main(_):
 
   checkpoint = FLAGS.checkpoint + '/model.ckpt'
 
-  model = D
+  model = Dialo
