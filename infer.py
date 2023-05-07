@@ -35,4 +35,4 @@ def main(_):
 
   checkpoint = FLAGS.checkpoint + '/model.ckpt'
 
-  model = DialogueModel(batch_size=1, max_seq_length=data_loader.seq
+  model = DialogueModel(batch_size=1, max_seq_length=data_loader.seq_len
