@@ -39,4 +39,4 @@ def main(_):
                         vocab_size=vocab_size, pad_token_id=0, unk_token_id=UNK_ID,
                         emb_size=emb_size, memory_size=config["memory_size"],
                         keep_prob=config["keep_prob"], learning_rate=config["learning_rate"],
-                        grad_clip=config["grad
+                        grad_clip=config["grad_cl
