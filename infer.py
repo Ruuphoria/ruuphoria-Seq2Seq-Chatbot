@@ -40,3 +40,5 @@ def main(_):
                         emb_size=emb_size, memory_size=config["memory_size"],
                         keep_prob=config["keep_prob"], learning_rate=config["learning_rate"],
                         grad_clip=config["grad_clip"], temperature=config["temperature"], infer=True)
+
+  in
