@@ -41,4 +41,4 @@ def main(_):
                         keep_prob=config["keep_prob"], learning_rate=config["learning_rate"],
                         grad_clip=config["grad_clip"], temperature=config["temperature"], infer=True)
 
-  init = tf.global_variables_
+  init = tf.global_variables_i
