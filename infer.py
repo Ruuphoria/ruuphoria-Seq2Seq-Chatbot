@@ -42,4 +42,4 @@ def main(_):
                         grad_clip=config["grad_clip"], temperature=config["temperature"], infer=True)
 
   init = tf.global_variables_initializer()
-  saver = tf.trai
+  saver = tf.train.Saver(
