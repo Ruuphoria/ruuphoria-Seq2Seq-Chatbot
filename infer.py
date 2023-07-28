@@ -44,4 +44,4 @@ def main(_):
   init = tf.global_variables_initializer()
   saver = tf.train.Saver()
 
-  with tf.Session(
+  with tf.Session() as 
