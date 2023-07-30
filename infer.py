@@ -47,3 +47,4 @@ def main(_):
   with tf.Session() as sess:
     sess.run(init)
 
+    if 
