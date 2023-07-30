@@ -45,4 +45,4 @@ def main(_):
   saver = tf.train.Saver()
 
   with tf.Session() as sess:
-    ses
+    sess.run(i
