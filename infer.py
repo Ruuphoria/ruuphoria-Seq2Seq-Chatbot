@@ -48,3 +48,4 @@ def main(_):
     sess.run(init)
 
     if len(glob(checkpoint + "*")) > 0:
+    
