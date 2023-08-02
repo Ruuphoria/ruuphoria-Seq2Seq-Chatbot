@@ -48,4 +48,4 @@ def main(_):
     sess.run(init)
 
     if len(glob(checkpoint + "*")) > 0:
-      saver.restore(
+      saver.restore(sess
