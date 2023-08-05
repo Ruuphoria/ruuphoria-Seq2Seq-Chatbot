@@ -49,4 +49,4 @@ def main(_):
 
     if len(glob(checkpoint + "*")) > 0:
       saver.restore(sess, checkpoint)
-    
+    else:
