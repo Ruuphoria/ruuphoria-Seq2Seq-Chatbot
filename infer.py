@@ -51,4 +51,4 @@ def main(_):
       saver.restore(sess, checkpoint)
     else:
       print("No model found!")
-      r
+      retur
