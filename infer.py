@@ -54,4 +54,5 @@ def main(_):
       return
 
     ## -- debug --
-    #np.set_printoptions(threshold=
+    #np.set_printoptions(threshold=np.inf)
+    
