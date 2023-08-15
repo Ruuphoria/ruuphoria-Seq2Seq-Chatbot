@@ -54,4 +54,4 @@ def main(_):
       return
 
     ## -- debug --
-    #np.set_pri
+    #np.set_printoptio
