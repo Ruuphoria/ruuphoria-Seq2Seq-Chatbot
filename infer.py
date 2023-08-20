@@ -55,4 +55,4 @@ def main(_):
 
     ## -- debug --
     #np.set_printoptions(threshold=np.inf)
-    #for v in tf.trainable_vari
+    #for v in tf.trainable_variables(
