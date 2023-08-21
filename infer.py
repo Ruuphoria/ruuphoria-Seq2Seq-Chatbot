@@ -57,4 +57,4 @@ def main(_):
     #np.set_printoptions(threshold=np.inf)
     #for v in tf.trainable_variables():
     #  print(v.name)
-    # 
+    #  pr
