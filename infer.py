@@ -58,4 +58,4 @@ def main(_):
     #for v in tf.trainable_variables():
     #  print(v.name)
     #  print(sess.run(v))
-    #  p
+    #  prin
