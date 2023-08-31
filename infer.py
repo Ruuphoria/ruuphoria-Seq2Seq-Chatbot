@@ -63,4 +63,4 @@ def main(_):
 
     while True:
       try:
-        input_ = inpu
+        input_ = input(
