@@ -64,4 +64,4 @@ def main(_):
     while True:
       try:
         input_ = input('in> ')
-      exc
+      except
