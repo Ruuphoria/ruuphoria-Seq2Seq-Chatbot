@@ -63,4 +63,4 @@ def main(_):
 
     while True:
       try:
-        input_ = input('i
+        input_ = input('in> '
