@@ -64,4 +64,5 @@ def main(_):
     while True:
       try:
         input_ = input('in> ')
-      except EOFErr
+      except EOFError:
+  
