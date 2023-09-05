@@ -65,4 +65,5 @@ def main(_):
       try:
         input_ = input('in> ')
       except EOFError:
-        print("\nBye!"
+        print("\nBye!")
+ 
