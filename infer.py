@@ -68,4 +68,4 @@ def main(_):
         print("\nBye!")
         break
 
-      input_ids, i
+      input_ids, input
