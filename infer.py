@@ -68,4 +68,4 @@ def main(_):
         print("\nBye!")
         break
 
-      input_ids, input_len = data_loader.parse_inpu
+      input_ids, input_len = data_loader.parse_input(inpu
