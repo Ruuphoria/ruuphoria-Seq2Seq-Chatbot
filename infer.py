@@ -71,4 +71,5 @@ def main(_):
       input_ids, input_len = data_loader.parse_input(input_)
 
       feed = {
-        model.input_data: np.expand_dims(input_ids, 0
+        model.input_data: np.expand_dims(input_ids, 0),
+  
