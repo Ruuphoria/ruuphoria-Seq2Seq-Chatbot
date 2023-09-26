@@ -73,4 +73,5 @@ def main(_):
       feed = {
         model.input_data: np.expand_dims(input_ids, 0),
         model.input_lengths: [input_len]
-    
+      }
+
