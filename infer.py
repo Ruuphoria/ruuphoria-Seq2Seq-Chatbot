@@ -75,4 +75,4 @@ def main(_):
         model.input_lengths: [input_len]
       }
 
-      output
+      output_id
