@@ -75,4 +75,4 @@ def main(_):
         model.input_lengths: [input_len]
       }
 
-      output_ids, state = sess.run([model.outpu
+      output_ids, state = sess.run([model.output_id
