@@ -77,4 +77,6 @@ def main(_):
 
       output_ids, state = sess.run([model.output_ids, model.final_state], feed_dict=feed)
 
-      print(data_loader.compose_output(output_ids[0])
+      print(data_loader.compose_output(output_ids[0]))
+
+i
