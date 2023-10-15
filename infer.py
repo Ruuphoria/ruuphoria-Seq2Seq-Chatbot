@@ -79,4 +79,4 @@ def main(_):
 
       print(data_loader.compose_output(output_ids[0]))
 
-if __name_
+if __name__ ==
