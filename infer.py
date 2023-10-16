@@ -80,3 +80,4 @@ def main(_):
       print(data_loader.compose_output(output_ids[0]))
 
 if __name__ == "__main__":
+  t
