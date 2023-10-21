@@ -25,3 +25,10 @@ class DialogueModel(object):
                start_token_id=1, end_token_id=2, pad_token_id=0, unk_token_id=3,
                emb_size=100, memory_size=100, keep_prob=0.5, temperature=0.5, antilm=0.55,
                learning_rate=0.001, grad_clip=5.0, infer=False):
+
+    self._batch_size = batch_size
+    self._vocab_size = vocab_size
+    self._memory_size = memory_size
+    self._start_token_id = start_token_id
+    self._end_token_id = end_token_id
+    self._max_seq_length = max_seq_length
