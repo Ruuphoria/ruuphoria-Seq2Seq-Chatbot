@@ -50,3 +50,9 @@ class DialogueModel(object):
     with tf.device("/cpu:0"):
       self.embedding = tf.get_variable("embedding", [vocab_size, emb_size])
       inputs = tf.nn.embedding_lookup(self.embedding, self.input_data)
+
+    if self._keep_prob < 1 and not infer:
+      inputs = tf.nn.dropout(inputs, keep_prob=self._keep_prob)
+
+    with tf.variable_scope("encoder", initializer=glorot()):
+      fw_cell = GRUCell(emb_size)
