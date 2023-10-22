@@ -46,3 +46,7 @@ class DialogueModel(object):
     self.output_data = tf.placeholder(tf.int32, [batch_size, max_seq_length], name='output_data')
     self.output_lengths = tf.placeholder(tf.int32, [batch_size], name='output_lengths')
     self.global_step = tf.Variable(0, name="global_step", trainable=False)
+
+    with tf.device("/cpu:0"):
+      self.embedding = tf.get_variable("embedding", [vocab_size, emb_size])
+      inputs = tf.nn.embedding_lookup(self.embedding, self.input_data)
