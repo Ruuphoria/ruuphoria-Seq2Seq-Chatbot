@@ -80,3 +80,10 @@ class DialogueModel(object):
     tvars = tf.trainable_variables()
 
     print("parameter size:", _count_param_size(tvars))
+
+    grads, _ = tf.clip_by_global_norm(tf.gradients(self.loss, tvars), grad_clip)
+    optimizer = tf.train.AdamOptimizer(learning_rate)
+    self.train_op = optimizer.apply_gradients(zip(grads, tvars), global_step=self.global_step)
+
+  def get_loss(self, outputs):
+    output_maxlen = tf.minimum(tf.shape(outputs)[1], self._max_seq_length)
