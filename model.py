@@ -60,3 +60,7 @@ class DialogueModel(object):
       if self._keep_prob < 1 and not infer:
         fw_cell = DropoutWrapper(fw_cell, output_keep_prob=self._keep_prob)
         bw_cell = DropoutWrapper(bw_cell, output_keep_prob=self._keep_prob)
+
+    with tf.variable_scope("context", initializer=glorot()):
+      ctx_cell = GRUCell(memory_size * 2)
+      self.ctx_w = tf.get_variable("context_w", [memory_size * 2, memory_size])
