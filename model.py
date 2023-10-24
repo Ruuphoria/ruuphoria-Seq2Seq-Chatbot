@@ -93,3 +93,11 @@ class DialogueModel(object):
     with tf.name_scope("costs"):
       # We need to delete zeroed elements in targets, beyond max sequence
       length_mask = tf.sequence_mask(self.output_lengths, maxlen=output_maxlen, dtype=tf.float32)
+      final_loss = seq2seq.sequence_loss(out_logits_slice, out_data_slice, length_mask)
+      return final_loss
+
+  def seq2seq(self, inputs, fw_cell, bw_cell, ctx_cell, dec_cell, reuse=False):
+    with tf.variable_scope("seq2seq") as scope:
+      if reuse:
+        scope.reuse_variables()
+      enc_outputs, enc_state = self.encode(fw_cell, bw_cell, inputs)
