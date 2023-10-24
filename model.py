@@ -87,3 +87,9 @@ class DialogueModel(object):
 
   def get_loss(self, outputs):
     output_maxlen = tf.minimum(tf.shape(outputs)[1], self._max_seq_length)
+    out_data_slice = tf.slice(self.output_data, [0, 0], [-1, output_maxlen])
+    out_logits_slice = tf.slice(outputs, [0, 0, 0], [-1, output_maxlen, -1])
+
+    with tf.name_scope("costs"):
+      # We need to delete zeroed elements in targets, beyond max sequence
+      length_mask = tf.sequence_mask(self.output_lengths, maxlen=output_maxlen, dtype=tf.float32)
