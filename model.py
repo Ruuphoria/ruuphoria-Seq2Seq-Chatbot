@@ -103,3 +103,6 @@ class DialogueModel(object):
       enc_outputs, enc_state = self.encode(fw_cell, bw_cell, inputs)
       ctx_outputs, ctx_state = self.contextual(ctx_cell, enc_state)
       dec_outputs, dec_sample_id, dec_state = self.decode(dec_cell, enc_outputs, ctx_outputs)
+    outputs = dec_outputs
+    output_ids = dec_sample_id
+    output_state = dec_state.cell_state
