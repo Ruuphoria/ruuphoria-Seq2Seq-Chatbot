@@ -116,3 +116,7 @@ class DialogueModel(object):
 
       enc_out, (enc_state_fw, enc_state_bw) = bidirectional_dynamic_rnn(cell_fw=fw_cell,
                                                                         cell_bw=bw_cell,
+                                                                        inputs=inputs,
+                                                                        sequence_length=self.input_lengths,
+                                                                        initial_state_fw=fw_cell_state,
+                                                                        initial_state_bw=bw_cell_state)
