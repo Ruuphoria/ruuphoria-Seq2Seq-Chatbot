@@ -111,3 +111,8 @@ class DialogueModel(object):
 
   def encode(self, fw_cell, bw_cell, inputs):
     with tf.variable_scope("encode"):
+      fw_cell_state = fw_cell.zero_state(self._batch_size, tf.float32)
+      bw_cell_state = bw_cell.zero_state(self._batch_size, tf.float32)
+
+      enc_out, (enc_state_fw, enc_state_bw) = bidirectional_dynamic_rnn(cell_fw=fw_cell,
+                                                                        cell_bw=bw_cell,
