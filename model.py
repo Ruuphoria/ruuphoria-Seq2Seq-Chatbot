@@ -106,3 +106,8 @@ class DialogueModel(object):
     outputs = dec_outputs
     output_ids = dec_sample_id
     output_state = dec_state.cell_state
+
+    return outputs, output_ids, output_state, ctx_state
+
+  def encode(self, fw_cell, bw_cell, inputs):
+    with tf.variable_scope("encode"):
