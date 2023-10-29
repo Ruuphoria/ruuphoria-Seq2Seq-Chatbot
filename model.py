@@ -129,3 +129,10 @@ class DialogueModel(object):
   def contextual(self, ctx_cell, enc_state):
     with tf.variable_scope("context"):
       _, ctx_state = ctx_cell(enc_state, self.initial_state)
+      # Sec 3.2.3 in https://arxiv.org/pdf/1507.02221.pdf
+      ctx_outputs = tf.tanh(tf.matmul(ctx_state, self.ctx_w) + self.ctx_b)
+    return ctx_outputs, ctx_state
+
+  def decode(self, dec_cell, enc_outputs, ctx_outputs):
+    with tf.variable_scope("decode"):
+      batch_size = self._batch_size
