@@ -125,3 +125,7 @@ class DialogueModel(object):
       enc_outputs = tf.concat(enc_out, 2)
 
     return enc_outputs, enc_state
+
+  def contextual(self, ctx_cell, enc_state):
+    with tf.variable_scope("context"):
+      _, ctx_state = ctx_cell(enc_state, self.initial_state)
