@@ -144,3 +144,9 @@ class DialogueModel(object):
       helper_build_fn = self._infer_helper if self._infer else self._train_helper
 
       output_layer = layers_core.Dense(self._vocab_size, use_bias=True, activation=None)
+      decoder = seq2seq.BasicDecoder(cell=dec_cell,
+                                     helper=helper_build_fn(),
+                                     initial_state=dec_initial_state,
+                                     output_layer=output_layer)
+      dec_output, dec_state = seq2seq.dynamic_decode(decoder,
+                                                     impute_finished=True,
