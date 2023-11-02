@@ -166,3 +166,5 @@ class DialogueModel(object):
     decoder_inputs = tf.nn.embedding_lookup(self.embedding, decoder_input_ids)
 
     return seq2seq.TrainingHelper(inputs=decoder_inputs, sequence_length=self.output_lengths)
+
+  def infer(self, sess, x, y, x_lens, y_lens, initial_state):
