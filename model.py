@@ -162,3 +162,7 @@ class DialogueModel(object):
 
   def _train_helper(self):
     start_ids = tf.fill([self._batch_size, 1], self._start_token_id)
+    decoder_input_ids = tf.concat([start_ids, self.output_data], 1)
+    decoder_inputs = tf.nn.embedding_lookup(self.embedding, decoder_input_ids)
+
+    return seq2seq.TrainingHelper(inputs=decoder_inputs, sequence_length=self.output_lengths)
