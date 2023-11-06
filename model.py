@@ -172,3 +172,10 @@ class DialogueModel(object):
             self.input_lengths: x_lens,
             self.output_data: y,
             self.output_lengths: y_lens}
+    fetches = {"outputs": self.outputs,
+               "output_ids": self.output_ids,
+               "final_state": self.final_state,
+               "global_step": self.global_step}
+
+    if initial_state is not None:
+      feed[self.initial_state] = initial_state
