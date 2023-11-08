@@ -193,3 +193,11 @@ class DialogueModel(object):
                "loss": self.loss,
                "global_step": self.global_step,
                "train_op": self.train_op}
+
+    if initial_state is not None:
+      feed[self.initial_state] = initial_state
+
+    if summaries is not None:
+      fetches["summary_out"] = summaries
+
+    return sess.run(fetches, feed_dict=feed)
