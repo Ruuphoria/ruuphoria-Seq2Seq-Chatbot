@@ -185,3 +185,10 @@ class DialogueModel(object):
   def step(self, sess, x, y, x_lens, y_lens, initial_state, summaries=None):
     feed = {self.input_data: x,
             self.input_lengths: x_lens,
+            self.output_data: y,
+            self.output_lengths: y_lens}
+    fetches = {"outputs": self.outputs,
+               "output_ids": self.output_ids,
+               "final_state": self.final_state,
+               "loss": self.loss,
+               "global_step": self.global_step,
