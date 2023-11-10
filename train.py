@@ -13,3 +13,5 @@ from model import DialogueModel
 pp = pprint.PrettyPrinter()
 
 flags = tf.app.flags
+flags.DEFINE_integer("num_epochs", 25, "Epoch to train [25]")
+flags.DEFINE_integer("memory_size", 300, "Memory size [300]")
