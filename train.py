@@ -15,3 +15,6 @@ pp = pprint.PrettyPrinter()
 flags = tf.app.flags
 flags.DEFINE_integer("num_epochs", 25, "Epoch to train [25]")
 flags.DEFINE_integer("memory_size", 300, "Memory size [300]")
+flags.DEFINE_integer("emb_size", 300, "The dimension of embedding matrix [300]")
+flags.DEFINE_integer("batch_size", 32, "The size of batch [32]")
+flags.DEFINE_float("learning_rate", 0.001, "Learning rate [0.001]")
