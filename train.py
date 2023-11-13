@@ -21,3 +21,6 @@ flags.DEFINE_float("learning_rate", 0.001, "Learning rate [0.001]")
 flags.DEFINE_float("keep_prob", 0.5, "Dropout rate [0.5]")
 flags.DEFINE_float("grad_clip", 5.0, "Grad clip [5.0]")
 flags.DEFINE_integer("temperature", 5, "temperature [5]")
+flags.DEFINE_string("checkpoint", "checkpoint", "Directory name to save the checkpoints [checkpoint]")
+flags.DEFINE_string("logdir", "log", "Log directory [log]")
+FLAGS = flags.FLAGS
