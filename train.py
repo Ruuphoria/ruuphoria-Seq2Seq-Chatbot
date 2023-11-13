@@ -48,3 +48,8 @@ def main(_):
                         infer=False)
 
   summaries = tf.summary.merge_all()
+
+  init = tf.global_variables_initializer()
+
+  # save hyper-parameters
+  cPickle.dump(FLAGS.__flags, open(FLAGS.logdir + "/hyperparams.pkl", 'wb'))
