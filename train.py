@@ -28,3 +28,6 @@ FLAGS = flags.FLAGS
 def main(_):
   pp.pprint(FLAGS.__flags)
   emb = None
+
+  try:
+    # pre-trained chars embedding
