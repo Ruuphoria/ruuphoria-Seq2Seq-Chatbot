@@ -38,3 +38,6 @@ def main(_):
   except Exception:
     data_loader = TextLoader('./data', FLAGS.batch_size)
     emb_size = FLAGS.emb_size
+    vocab_size = data_loader.vocab_size
+
+  model = DialogueModel(batch_size=FLAGS.batch_size, max_seq_length=data_loader.seq_length,
