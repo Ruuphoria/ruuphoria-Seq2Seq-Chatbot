@@ -41,3 +41,10 @@ def main(_):
     vocab_size = data_loader.vocab_size
 
   model = DialogueModel(batch_size=FLAGS.batch_size, max_seq_length=data_loader.seq_length,
+                        vocab_size=vocab_size, pad_token_id=0, unk_token_id=UNK_ID,
+                        emb_size=emb_size, memory_size=FLAGS.memory_size,
+                        keep_prob=FLAGS.keep_prob, learning_rate=FLAGS.learning_rate,
+                        grad_clip=FLAGS.grad_clip, temperature=FLAGS.temperature,
+                        infer=False)
+
+  summaries = tf.summary.merge_all()
