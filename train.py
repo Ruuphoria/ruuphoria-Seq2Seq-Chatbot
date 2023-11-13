@@ -24,3 +24,7 @@ flags.DEFINE_integer("temperature", 5, "temperature [5]")
 flags.DEFINE_string("checkpoint", "checkpoint", "Directory name to save the checkpoints [checkpoint]")
 flags.DEFINE_string("logdir", "log", "Log directory [log]")
 FLAGS = flags.FLAGS
+
+def main(_):
+  pp.pprint(FLAGS.__flags)
+  emb = None
