@@ -53,3 +53,5 @@ def main(_):
 
   # save hyper-parameters
   cPickle.dump(FLAGS.__flags, open(FLAGS.logdir + "/hyperparams.pkl", 'wb'))
+
+  checkpoint = FLAGS.checkpoint + '/model.ckpt'
