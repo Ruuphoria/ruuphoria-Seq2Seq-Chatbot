@@ -72,3 +72,10 @@ def main(_):
       if emb is not None:
         sess.run([], { model.embedding: emb })
       print("Fresh variables!")
+
+    current_step = 0
+    count = 0
+
+    for e in range(FLAGS.num_epochs):
+      data_loader.reset_batch_pointer()
+      state = None
