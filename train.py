@@ -65,3 +65,8 @@ def main(_):
     sess.run(init)
 
     if len(glob(checkpoint + "*")) > 0:
+      saver.restore(sess, checkpoint)
+      print("Model restored!")
+    else:
+      # load embedding
+      if emb is not None:
