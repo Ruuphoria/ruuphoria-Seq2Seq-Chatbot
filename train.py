@@ -70,3 +70,5 @@ def main(_):
     else:
       # load embedding
       if emb is not None:
+        sess.run([], { model.embedding: emb })
+      print("Fresh variables!")
