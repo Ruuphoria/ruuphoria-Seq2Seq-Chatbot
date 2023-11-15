@@ -60,3 +60,8 @@ def main(_):
   saver = tf.train.Saver()
 
   with tf.Session() as sess:
+    summary_writer = tf.summary.FileWriter(FLAGS.logdir, sess.graph)
+
+    sess.run(init)
+
+    if len(glob(checkpoint + "*")) > 0:
