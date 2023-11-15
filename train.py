@@ -55,3 +55,8 @@ def main(_):
   cPickle.dump(FLAGS.__flags, open(FLAGS.logdir + "/hyperparams.pkl", 'wb'))
 
   checkpoint = FLAGS.checkpoint + '/model.ckpt'
+  count = 0
+
+  saver = tf.train.Saver()
+
+  with tf.Session() as sess:
