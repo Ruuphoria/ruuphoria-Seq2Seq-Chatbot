@@ -79,3 +79,6 @@ def main(_):
     for e in range(FLAGS.num_epochs):
       data_loader.reset_batch_pointer()
       state = None
+
+      # iterate by batch
+      for _ in range(data_loader.num_batches):
