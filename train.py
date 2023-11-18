@@ -82,3 +82,9 @@ def main(_):
 
       # iterate by batch
       for _ in range(data_loader.num_batches):
+        x, y, input_lengths, output_lengths = data_loader.next_batch()
+
+        if (current_step + 1) % 10 != 0:
+          res = model.step(sess, x, y, input_lengths, output_lengths, state)
+        else:
+          res = model.step(sess, x, y, input_lengths, output_lengths, state, summaries)
