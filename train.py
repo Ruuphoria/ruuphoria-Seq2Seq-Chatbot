@@ -88,3 +88,5 @@ def main(_):
           res = model.step(sess, x, y, input_lengths, output_lengths, state)
         else:
           res = model.step(sess, x, y, input_lengths, output_lengths, state, summaries)
+          summary_writer.add_summary(res["summary_out"], current_step)
+          loss = res["loss"]
