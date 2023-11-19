@@ -97,3 +97,5 @@ def main(_):
                                                       e,
                                                       perplexity))
         state = res["final_state"]
+
+        if (current_step + 1) % 2000 == 0:
