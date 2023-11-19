@@ -99,3 +99,5 @@ def main(_):
         state = res["final_state"]
 
         if (current_step + 1) % 2000 == 0:
+          count = 0
+          summary_writer.flush()
