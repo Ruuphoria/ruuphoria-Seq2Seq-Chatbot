@@ -95,3 +95,5 @@ def main(_):
           print("{0}/{1}({2}), perplexity {3}".format(current_step + 1,
                                                       FLAGS.num_epochs * data_loader.num_batches,
                                                       e,
+                                                      perplexity))
+        state = res["final_state"]
