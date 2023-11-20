@@ -101,3 +101,7 @@ def main(_):
         if (current_step + 1) % 2000 == 0:
           count = 0
           summary_writer.flush()
+          save_path = saver.save(sess, checkpoint)
+          print("Model saved in file:", save_path)
+
+        current_step = tf.train.global_step(sess, model.global_step)
