@@ -108,3 +108,7 @@ def main(_):
 
     summary_writer.close()
     save_path = saver.save(sess, checkpoint)
+    print("Model saved in file:", save_path)
+
+if __name__ == "__main__":
+  tf.app.run()
