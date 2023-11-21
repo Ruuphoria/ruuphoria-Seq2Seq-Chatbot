@@ -105,3 +105,6 @@ def main(_):
           print("Model saved in file:", save_path)
 
         current_step = tf.train.global_step(sess, model.global_step)
+
+    summary_writer.close()
+    save_path = saver.save(sess, checkpoint)
