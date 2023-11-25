@@ -21,3 +21,8 @@ def normalize_unicodes(text):
   text = normalize_punctuation(text)
   text = "".join([Q2B(c) for c in list(text)])
   return text
+
+def replace_all(repls, text):
+  # return re.sub('|'.join(repls.keys()), lambda k: repls[k.group(0)], text)
+  return re.sub(u'|'.join(re.escape(key) for key in repls.keys()),
+                lambda k: repls[k.group(0)], text)
