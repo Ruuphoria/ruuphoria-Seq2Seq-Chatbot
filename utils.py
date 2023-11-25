@@ -14,3 +14,7 @@ GO = "_GO"
 EOS = "_EOS"
 UNK = "_UNK"
 UNK_ID = 3
+PAD_ID = 0
+START_VOCAB = [PAD, GO, EOS, UNK]
+
+def normalize_unicodes(text):
