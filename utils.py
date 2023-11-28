@@ -58,3 +58,9 @@ def normalize_punctuation(text):
       repls[cpun[i][j]] = epun[i]
 
   return replace_all(repls, text)
+
+def Q2B(uchar):
+  """全角转半角"""
+  inside_code = ord(uchar)
+  if inside_code == 0x3000:
+    inside_code = 0x0020
