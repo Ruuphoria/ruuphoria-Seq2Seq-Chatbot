@@ -28,3 +28,10 @@ def replace_all(repls, text):
                 lambda k: repls[k.group(0)], text)
 
 def normalize_punctuation(text):
+  cpun = [['	'],
+          [u'﹗'],
+          [u'“', u'゛', u'〃', u'′'],
+          [u'”'],
+          [u'´', u'‘', u'’'],
+          [u'；', u'﹔'],
+          [u'《', u'〈', u'＜'],
