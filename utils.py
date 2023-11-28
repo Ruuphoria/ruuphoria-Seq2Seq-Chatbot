@@ -52,3 +52,9 @@ def normalize_punctuation(text):
           [u'—', u'ー', u'―', u'‐', u'−', u'─', u'﹣', u'–', u'ㄧ']]
   epun = [u' ', u'！', u'"', u'"', u'\'', u';', u'<', u'>', u'、', u'[', u']', u'(', u')', u'？', u'：', u'･', u'•', u'~', u'|', u'/', u'\\', u'-']
   repls = {}
+
+  for i in range(len(cpun)):
+    for j in range(len(cpun[i])):
+      repls[cpun[i][j]] = epun[i]
+
+  return replace_all(repls, text)
