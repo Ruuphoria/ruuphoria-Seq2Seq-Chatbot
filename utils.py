@@ -77,3 +77,9 @@ class TextLoader(object):
     self.batch_size = batch_size
     self.seq_length = 0
     self.input_files = glob(data_dir + '/*.txt')
+    self.vocabs = {}
+    self.chars = chars
+    self.seq_lengths = []
+
+    vocab_file = os.path.join(data_dir, "vocab.pkl")
+    data_file = os.path.join(data_dir, "data.pkl")
