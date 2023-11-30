@@ -83,3 +83,7 @@ class TextLoader(object):
 
     vocab_file = os.path.join(data_dir, "vocab.pkl")
     data_file = os.path.join(data_dir, "data.pkl")
+
+    if os.path.exists(data_file):
+      print("[TextLoader] Load saved data...")
+      with open(data_file, 'rb') as f:
