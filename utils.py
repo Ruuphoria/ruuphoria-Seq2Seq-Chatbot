@@ -92,3 +92,7 @@ class TextLoader(object):
         if my_chars is not None and not len(self.chars) > 0:
           self.chars = my_chars
         self.vocab = dict(zip(self.chars, range(len(self.chars))))
+        self.vocab_size = len(self.chars)
+    else:
+      print("[TextLoader] Reading text file...")
+      self.preprocess(self.input_files, data_file, vocab_file)
