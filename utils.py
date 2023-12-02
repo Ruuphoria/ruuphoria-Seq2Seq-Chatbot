@@ -100,3 +100,6 @@ class TextLoader(object):
     print("[TextLoader] Processing...")
     self.create_batches()
     self.reset_batch_pointer()
+
+  def preprocess(self, input_files, data_file, vocab_file):
+    sents = []
