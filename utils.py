@@ -96,3 +96,7 @@ class TextLoader(object):
     else:
       print("[TextLoader] Reading text file...")
       self.preprocess(self.input_files, data_file, vocab_file)
+
+    print("[TextLoader] Processing...")
+    self.create_batches()
+    self.reset_batch_pointer()
