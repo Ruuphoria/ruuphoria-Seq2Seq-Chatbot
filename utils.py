@@ -103,3 +103,4 @@ class TextLoader(object):
 
   def preprocess(self, input_files, data_file, vocab_file):
     sents = []
+    seq_length = 0
