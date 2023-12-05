@@ -104,3 +104,7 @@ class TextLoader(object):
   def preprocess(self, input_files, data_file, vocab_file):
     sents = []
     seq_length = 0
+
+    for input_file in input_files:
+      with codecs.open(input_file, "r", "utf-8") as f:
+        lines = normalize_unicodes(f.read()).split("\n")
