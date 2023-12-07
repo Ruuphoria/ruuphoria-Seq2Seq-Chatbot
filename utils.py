@@ -114,3 +114,13 @@ class TextLoader(object):
             continue
           seq_length = max(seq_length, len(line))
           sents.append(line)
+
+    if not len(self.chars):
+      # Compose vocab
+      lines = "".join(sents)
+      counter = collections.Counter(lines)
+      count_pairs = sorted(counter.items(), key=lambda x: -x[1])
+      self.chars, _ = list(zip(*count_pairs))
+      self.chars = START_VOCAB + list(self.chars)
+
+    self.vocab = dict(zip(self.chars, range(len(self.chars))))
