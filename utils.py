@@ -124,3 +124,5 @@ class TextLoader(object):
       self.chars = START_VOCAB + list(self.chars)
 
     self.vocab = dict(zip(self.chars, range(len(self.chars))))
+    self.vocab_size = len(self.chars)
+    self.seq_length = seq_length + 1 # for additional symbols GO, EOS
