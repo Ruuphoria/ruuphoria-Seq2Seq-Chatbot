@@ -108,3 +108,9 @@ class TextLoader(object):
     for input_file in input_files:
       with codecs.open(input_file, "r", "utf-8") as f:
         lines = normalize_unicodes(f.read()).split("\n")
+
+        for line in lines:
+          if len(line) == 0:
+            continue
+          seq_length = max(seq_length, len(line))
+          sents.append(line)
