@@ -139,3 +139,9 @@ class TextLoader(object):
       cPickle.dump(self.chars, f)
     with open(data_file, "wb") as f:
       cPickle.dump((self.data, self.seq_lengths, self.chars), f)
+
+  def parse_input(self, inputs):
+    eos_index = START_VOCAB.index(EOS)
+    vec = np.array([self.vocab.get(char, UNK_ID) for char in list(inputs)])
+    vec_len = vec.size + 1 # for additional symbols EOS
+    # Padding to seq_length
