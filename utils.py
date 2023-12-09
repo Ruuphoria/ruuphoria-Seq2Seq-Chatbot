@@ -132,3 +132,8 @@ class TextLoader(object):
     for i, sent in enumerate(sents):
       vec, vec_len = self.parse_input(sent)
       self.seq_lengths.append(vec_len)
+      self.data[i] = vec
+
+    # Export vocab and data
+    with open(vocab_file, "wb") as f:
+      cPickle.dump(self.chars, f)
