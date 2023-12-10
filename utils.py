@@ -147,3 +147,7 @@ class TextLoader(object):
     # Padding to seq_length
     vec = np.lib.pad(vec, (0, self.seq_length - vec.size), 'constant')
     vec[vec_len - 1] = eos_index
+
+    return vec, vec_len
+
+  def compose_output(self, output):
