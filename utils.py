@@ -152,3 +152,6 @@ class TextLoader(object):
 
   def compose_output(self, output):
     res = ""
+
+    for o in output:
+      if o == 2:
