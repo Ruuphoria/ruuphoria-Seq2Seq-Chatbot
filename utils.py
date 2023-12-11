@@ -171,3 +171,6 @@ class TextLoader(object):
     self.seq_lengths = self.seq_lengths[:batch_length]
 
     xdata = self.data[:-1]
+    ydata = np.copy(self.data[1:])
+    xdata_lengths = np.array(self.seq_lengths[:-1])
+    ydata_lengths = np.array(self.seq_lengths[1:])
