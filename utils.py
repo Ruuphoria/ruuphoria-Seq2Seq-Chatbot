@@ -161,3 +161,13 @@ class TextLoader(object):
         res = res + self.chars[o]
       except Exception as e:
         raise Exception('{0} is out of range'.format(o))
+
+    return res
+
+  def create_batches(self):
+    self.num_batches = int((self.data.shape[0] - 1) / (self.batch_size))
+    batch_length = self.num_batches * int(self.batch_size) + 1
+    self.data = self.data[:batch_length]
+    self.seq_lengths = self.seq_lengths[:batch_length]
+
+    xdata = self.data[:-1]
