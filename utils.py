@@ -186,3 +186,7 @@ class TextLoader(object):
     x_lengths = self.xdata_lengths_batches[self.pointer]
     y_lengths = self.ydata_lengths_batches[self.pointer]
     self.pointer += 1
+
+    return x, y, x_lengths, y_lengths
+
+  def reset_batch_pointer(self):
