@@ -13,3 +13,9 @@
 
 ## Result
 This the result trained with 1400 movies and TV show subtitles around  1.4 million sentences.
+![Demo](/meetup_demo.png)
+
+## Future Improvements
+* Incorporation of Anti-language model to suppress generic response
+* Utilization of MMI-loss as objective function
+* Implementation of Reinforcement Learning?
